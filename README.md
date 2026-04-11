@@ -106,6 +106,94 @@ applyTo: ["src/components/**/*.tsx", "src/pages/**/*.tsx"]
 - [GitHub Copilot Pro](https://github.com/features/copilot) サブスクリプション
 - VS Code + GitHub Copilot Chat 拡張機能
 
+## セットアップ
+
+### 1. テンプレートからリポジトリを作成
+
+```bash
+# このテンプレートをクローン
+git clone https://github.com/<your-org>/github_ai_template.git my-project
+cd my-project
+
+# 既存の Git 履歴を削除して新しいリポジトリとして初期化
+rm -rf .git
+git init
+git add .
+git commit -m "chore: initial commit from ai-driven template"
+```
+
+または GitHub 上で「Use this template」ボタンから新しいリポジトリを作成できます。
+
+### 2. VS Code の設定を確認
+
+1. VS Code で GitHub Copilot Chat 拡張機能がインストールされていることを確認
+2. GitHub Copilot Pro にサインイン済みであることを確認
+3. プロジェクトフォルダを VS Code で開く
+
+テンプレート内のファイルは VS Code が自動的に認識します。追加の設定は不要です。
+
+### 3. 動作確認
+
+Copilot Chat を開き、以下を試してください:
+
+- チャットで `/new-feature ユーザー認証機能` と入力 → プロンプトテンプレートが起動
+- エージェントセレクターから `@planner` を選択 → 設計モードで会話が始まる
+- `.py` ファイルを開いて編集 → Python のインストラクションが自動適用される
+
+## 開発ワークフロー
+
+このテンプレートは以下のワークフローを推奨しています。
+
+### 新機能の開発
+
+```
+1. @planner で要件整理・設計
+   ↓
+2. /new-feature で実装開始（自動的に TDD サイクルを遵守）
+   ↓
+3. /commit-message でコミットメッセージを生成
+   ↓
+4. /create-pr で PR 説明文を生成
+```
+
+### バグ修正
+
+```
+1. @debugger で根本原因を特定
+   ↓
+2. /fix-bug で再現テスト → 修正 → 検証
+   ↓
+3. /commit-message でコミットメッセージを生成
+```
+
+### コードレビュー
+
+```
+1. @code-reviewer で変更内容をレビュー
+   ↓
+2. 指摘事項を修正
+   ↓
+3. @code-reviewer で再レビュー
+```
+
+## よくある質問
+
+### Q: AGENTS.md とインストラクションの違いは？
+
+**AGENTS.md** はすべてのチャットリクエストで自動的に読み込まれるプロジェクト全体のガイドラインです。**インストラクション** (`.github/instructions/`) は特定のファイルを編集するとき、または特定のタスクを検出したときにオンデマンドで読み込まれます。
+
+### Q: カスタムエージェントはどこから呼び出せる？
+
+Copilot Chat のエージェントセレクター（入力欄左の `@` アイコン）から選択できます。また、他のエージェントからサブエージェントとして自動的に呼び出されることもあります。
+
+### Q: プロンプトテンプレートを追加するには？
+
+`.github/prompts/` に `<名前>.prompt.md` ファイルを作成してください。YAML フロントマターに `description` を含めると、チャットの `/` メニューに表示されます。
+
+### Q: チーム全体で共有できる？
+
+はい。すべての設定ファイルはリポジトリにコミットされるため、チームメンバーがクローンするだけで同じ環境が利用できます。
+
 ## 参考リンク
 
 - [Andrej Karpathy の LLM コーディングに関する考察](https://x.com/karpathy/status/2015883857489522876)
