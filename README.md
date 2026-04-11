@@ -112,7 +112,7 @@ applyTo: ["src/components/**/*.tsx", "src/pages/**/*.tsx"]
 
 ```bash
 # このテンプレートをクローン
-git clone https://github.com/<your-org>/github_ai_template.git my-project
+git clone https://github.com/mitsuo119/ai_dev_template.git my-project
 cd my-project
 
 # 既存の Git 履歴を削除して新しいリポジトリとして初期化
