@@ -83,7 +83,9 @@ Karpathy の4原則 + Superpowers の方法論をベースに構築。
 ## Git Conventions
 
 - コミットメッセージは [Conventional Commits](https://www.conventionalcommits.org/) に従う
-  - `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
+  - プレフィックスは英語: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
+  - 本文は日本語で記述する
+  - 例: `feat: ユーザー認証機能を追加`
 - ブランチ名: `feat/機能名`, `fix/バグ名`, `docs/ドキュメント名`
 - 1コミット = 1論理的変更
 - WIPコミットはスカッシュしてからマージ

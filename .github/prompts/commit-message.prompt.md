@@ -9,13 +9,14 @@ tools: [execute, read]
 
 ## フォーマット
 ```
-<type>(<scope>): <subject>
+<type>(<scope>): <日本語の説明>
 
 <body>
 ```
 
 ## ルール
-- type: feat, fix, docs, refactor, test, chore のいずれか
-- scope: 変更の影響範囲（省略可）
-- subject: 命令形、小文字始まり、末尾にピリオドなし、50文字以内
+- type: feat, fix, docs, refactor, test, chore のいずれか（英語）
+- scope: 変更の影響範囲（英語、省略可）
+- subject: 日本語で簡潔に記述、末尾に句点なし、50文字以内
 - body: 何を変更したかではなく、なぜ変更したかを説明
+- 例: `feat(認証): ログイン画面にパスワードリセットリンクを追加`

@@ -28,7 +28,8 @@ Andrej Karpathy の 4 原則と [obra/superpowers](https://github.com/obra/super
     │   ├── planner.agent.md           # 設計・ブレスト
     │   ├── code-reviewer.agent.md     # コードレビュー
     │   ├── tdd.agent.md               # テスト駆動開発
-    │   └── debugger.agent.md          # 体系的デバッグ
+    │   ├── debugger.agent.md          # 体系的デバッグ
+    │   └── git-ops.agent.md           # Git 操作・ PR 作成
     ├── prompts/                       # プロンプトテンプレート（/ で起動）
     │   ├── new-feature.prompt.md      # 新機能開発
     │   ├── fix-bug.prompt.md          # バグ修正
@@ -54,6 +55,7 @@ Andrej Karpathy の 4 原則と [obra/superpowers](https://github.com/obra/super
 | `@code-reviewer` | コード変更のレビュー（セキュリティ・品質チェック） |
 | `@tdd`           | RED → GREEN → REFACTOR サイクルの強制              |
 | `@debugger`      | 4 フェーズの体系的根本原因分析                     |
+| `@git-ops`       | コミット・プッシュ・ブランチ・ PR 作成などの Git 操作 |
 
 ### プロンプトテンプレート
 

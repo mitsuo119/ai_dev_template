@@ -1,6 +1,6 @@
 ---
 description: "Use when performing git operations like commit, push, pull, branch management, or creating pull requests. Handles version control workflows."
-tools: [execute, read, search, "github"]
+tools: [execute, read, search, "github/*"]
 ---
 
 You are a git operations specialist. Your job is to execute version control tasks safely and efficiently.
