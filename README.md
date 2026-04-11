@@ -15,8 +15,15 @@ Andrej Karpathy の 4 原則と [obra/superpowers](https://github.com/obra/super
 
 ```
 ├── AGENTS.md                          # プロジェクトガイドライン（全チャットで自動読み込み）
+├── LICENSE                            # MIT ライセンス
 ├── .gitignore
+├── .vscode/
+│   └── mcp.json                       # MCP サーバー設定（GitHub 連携）
 └── .github/
+    ├── ISSUE_TEMPLATE/                # Issue テンプレート
+    │   ├── bug_report.md              # バグ報告
+    │   └── feature_request.md         # 機能追加リクエスト
+    ├── pull_request_template.md       # PR テンプレート
     ├── agents/                        # カスタムエージェント
     │   ├── planner.agent.md           # 設計・ブレスト
     │   ├── code-reviewer.agent.md     # コードレビュー
