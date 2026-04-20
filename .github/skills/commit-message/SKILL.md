@@ -1,7 +1,6 @@
 ---
-description: "Generate a conventional commit message for staged changes"
-agent: "agent"
-tools: [execute, read]
+name: commit-message
+description: "Generate a conventional commit message for staged changes. Use when the user wants to create a commit message or has staged changes ready to commit."
 ---
 
 # Commit Message Generator
@@ -22,4 +21,4 @@ tools: [execute, read]
 - scope: 変更の影響範囲（英語、省略可）
 - subject: 日本語で簡潔に記述、末尾に句点なし、50文字以内
 - body: 何を変更したかではなく、なぜ変更したかを説明
-- 例: `feat(認証): ログイン画面にパスワードリセットリンクを追加`
+- 例: `feat(auth): ログイン画面にパスワードリセットリンクを追加`

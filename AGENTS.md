@@ -42,6 +42,11 @@ Karpathy の4原則 + Superpowers の方法論をベースに構築。
   2. [ステップ] → 検証: [チェック方法]
   ```
 
+## スキル
+
+`.github/skills/` に定義されたスキルは、エージェントがタスクに応じて自動的に呼び出します。
+詳細は各スキルフォルダ内の `SKILL.md` を参照してください。
+
 ## 開発ワークフロー
 
 ### 機能開発
@@ -86,7 +91,8 @@ Karpathy の4原則 + Superpowers の方法論をベースに構築。
 - コミットメッセージは [Conventional Commits](https://www.conventionalcommits.org/) に従う
   - プレフィックスは英語: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`, `chore:`
   - 本文は日本語で記述する
-  - 例: `feat: ユーザー認証機能を追加`
+  - scope は英語で記述する（省略可）
+  - 例: `feat(auth): ユーザー認証機能を追加`
 - ブランチ名: `feat/機能名`, `fix/バグ名`, `docs/ドキュメント名`
 - 1コミット = 1論理的変更
 - WIPコミットはスカッシュしてからマージ
